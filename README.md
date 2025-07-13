@@ -21,3 +21,20 @@ Key Advantages:
 
 Factors Influencing Startup Time:
 Startup time is affected by multiple parameters. A higher quality factor (Q) generally leads to slower startup as the system takes longer to build oscillations. Negative resistance (|RN|) plays a vital role in overcoming inherent losses and enabling the oscillator to initiate. Additionally, operating at higher frequencies tends to reduce the startup time, allowing the system to stabilize more quickly.
+# DAL Architecture: Fast Startup and Power Optimization
+The Detection-Assisted Loop (DAL) architecture is designed to ensure fast oscillator startup with low steady-state power consumption. It uses a feedback-driven control system combining detection, capacitor tuning, and current scaling.
+
+- Clock Detection:
+A clock detector, combining an envelope and digital detector, monitors the oscillator output and detects when stable oscillation begins.
+
+* Capacitor Bank Control:
+Once oscillation is detected, two 8×8 switched-capacitor arrays (C1a and C2a) across the XON and XOP terminals are activated. These enable precise, stepwise tuning of load capacitance.
+
+* Adaptive Current Scaling:
+Switches (S⟨0⟩ to S⟨3⟩) progressively activate current sources in steps (1× to 20×), providing high current at startup and reducing it afterward to save power.
+
+Finite State Machine (FSM):
+The FSM manages the overall DAL loop by coordinating detector inputs, capacitor control, and current scaling actions.
+
+Summary:
+The DAL loop operates autonomously, optimizing startup speed and minimizing steady-state power consumption.
