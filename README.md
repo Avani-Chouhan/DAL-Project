@@ -27,14 +27,14 @@ The Detection-Assisted Loop (DAL) architecture is designed to ensure fast oscill
 - Clock Detection:
 A clock detector, combining an envelope and digital detector, monitors the oscillator output and detects when stable oscillation begins.
 
-* Capacitor Bank Control:
+- Capacitor Bank Control:
 Once oscillation is detected, two 8×8 switched-capacitor arrays (C1a and C2a) across the XON and XOP terminals are activated. These enable precise, stepwise tuning of load capacitance.
 
-* Adaptive Current Scaling:
+- Adaptive Current Scaling:
 Switches (S⟨0⟩ to S⟨3⟩) progressively activate current sources in steps (1× to 20×), providing high current at startup and reducing it afterward to save power.
 
-Finite State Machine (FSM):
+- Finite State Machine (FSM):
 The FSM manages the overall DAL loop by coordinating detector inputs, capacitor control, and current scaling actions.
 
-Summary:
+- Summary:
 The DAL loop operates autonomously, optimizing startup speed and minimizing steady-state power consumption.
