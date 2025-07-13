@@ -38,3 +38,8 @@ The FSM manages the overall DAL loop by coordinating detector inputs, capacitor 
 
 - Summary:
 The DAL loop operates autonomously, optimizing startup speed and minimizing steady-state power consumption.
+
+# Conclusion
+The Detection-Assisted Loop (DAL) architecture provides an effective solution for achieving fast startup and low steady-state power in crystal oscillators. By combining clock detection, capacitor bank tuning, adaptive current scaling, and a finite state machine, it ensures controlled and efficient oscillator behavior from power-on to steady operation.
+
+Its fully automatic and robust design makes it easy to integrate into practical systems. With precise load adjustment and dynamic current control, the DAL method is ideal for power-constrained applications like IoT, where frequent duty-cycling and tight energy budgets demand efficient and reliable oscillator performance.
