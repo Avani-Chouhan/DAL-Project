@@ -15,11 +15,9 @@ Key Advantages:
 
 - Fast Start-Up: Reduces delay in system activation.
 
-- Autonomous Load Adjustment:
-
--- Temporarily increases load during startup to enhance oscillation buildup.
-
--- Reduces load post-startup to save power in steady-state conditions.
+- **Autonomous Load Adjustment:**
+  - Increases load temporarily during startup to accelerate oscillation buildup.
+  - Reduces load afterward to lower steady-state power usage.
 
 Factors Influencing Startup Time:
 Startup time is affected by multiple parameters. A higher quality factor (Q) generally leads to slower startup as the system takes longer to build oscillations. Negative resistance (|RN|) plays a vital role in overcoming inherent losses and enabling the oscillator to initiate. Additionally, operating at higher frequencies tends to reduce the startup time, allowing the system to stabilize more quickly.
